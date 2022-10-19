@@ -18,16 +18,16 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   </head>
   <body>
-    <div id="app">Render React here</div>
+    <div id="app">Render not rendered</div>
     <script type="text/babel">
       // Code Refactoring example
       var header1 = <h1>React ist nicht complicado</h1>;
-      var destination = document.getElementById("app");
+      // var destination = document.getElementById("app");
 
       ReactDOM.render(
         // Code refactoring example
-        header1,
-        destination
+        // header1,
+        // destination
 
         // <p>I am a paragrahp</p>,
         // <a href="google.com">Google</a>,
@@ -36,6 +36,13 @@
         //   <li>Two</li>
         //   <li>Three</li>
         // </ul>,
+
+        // multi element display
+        <div>
+          <h1>Kaiserslautern is a beautiful city</h1>
+          <h4>The forests are amazing.</h4>
+        </div>,
+        document.getElementById("app")
       );
     </script>
   </body>
