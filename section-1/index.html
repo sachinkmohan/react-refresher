@@ -20,16 +20,19 @@
   <body>
     <div id="app">Render React here</div>
     <script type="text/babel">
+      var header1 = <h1>React ist nicht complicado</h1>;
+      var destination = document.getElementById("app");
+
       ReactDOM.render(
-        // <h1>React ist nicht complicado</h1>,
+        header1,
+        destination
         // <p>I am a paragrahp</p>,
         // <a href="google.com">Google</a>,
-        <ul>
-          <li>One</li>
-          <li>Two</li>
-          <li>Three</li>
-        </ul>,
-        document.getElementById("app")
+        // <ul>
+        //   <li>One</li>
+        //   <li>Two</li>
+        //   <li>Three</li>
+        // </ul>,
       );
     </script>
   </body>
