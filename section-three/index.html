@@ -1,0 +1,53 @@
+<!-- Adding Styling to the stateless function class and Components -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Scripts for running react -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>Styling</title>
+  </head>
+  <body>
+    <div id="app">React not rendered</div>
+    <script type="text/babel">
+      //Defining function component
+
+      var FunctionComponent = function () {
+        var StyleRed = {
+          backgroundColor: "red",
+          height: 50,
+        };
+        return <h1 style={StyleRed}>Function Component Rendered</h1>;
+      };
+
+      class ClassComponent extends React.Component {
+        render() {
+          var StyleBlue = {
+            backgroundColor: "cyan",
+            height: 50,
+          };
+          return <h1 style={StyleBlue}>Class Component Rendered</h1>;
+        }
+      }
+
+      ReactDOM.render(
+        //REACT what and where
+        <div>
+          <FunctionComponent />
+          <ClassComponent />
+        </div>,
+        document.getElementById("app")
+      );
+    </script>
+  </body>
+</html>
