@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Scripts for running react -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>React States</title>
+  </head>
+  <body>
+    <div id="app">React Not Rendered</div>
+    <script type="text/babel">
+      class GuessMyAge extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            age: "Guess my Age Props",
+          };
+          //   this.onButtonClick = this.onButtonClick.bind(this); // binding is now done in the button
+        }
+
+        onButtonClick() {
+          this.setState({
+            age: "32",
+          });
+        }
+        render() {
+          return (
+            <div>
+              <h1>Guess the Age App</h1>
+              <h2>{this.state.age}</h2>
+              <button onClick={() => this.onButtonClick()}>
+                Reveal the age
+              </button>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(
+        //REeact What and Where
+        <GuessMyAge />,
+        document.getElementById("app")
+      );
+    </script>
+  </body>
+</html>
