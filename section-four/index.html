@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Scripts for running react -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- Font awesome libraries -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <title>Capstone Project</title>
+  </head>
+  <body>
+    <div id="app">React Not rendered</div>
+    <script type="text/babel">
+      //Display Picture
+      var DisplayPicture = function () {
+        var avatarStyle = {
+          borderRadius: "50%",
+        };
+        return (
+          <img
+            src="https://pbs.twimg.com/profile_images/516256839780950016/SbaibMDm_400x400.jpeg"
+            alt="Profile Pic Sachin"
+            style={avatarStyle}
+          />
+        );
+      };
+      var Title = function () {
+        return <h1>Sachin K Mohan</h1>;
+      };
+
+      var SocialMedia = function () {
+        return <i className="fa-solid fa-share"></i>;
+      };
+      //Title
+      //Social Media
+      //Like
+      //Share
+      //YouTube
+
+      ReactDOM.render(
+        <div>
+          <DisplayPicture />
+          <Title />
+          <SocialMedia />
+        </div>,
+        document.getElementById("app")
+      );
+    </script>
+  </body>
+</html>
